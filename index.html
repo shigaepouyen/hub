@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Link Hub Template</title>
+  <meta name="description" content="Un template simple et personnalisable pour regrouper tous vos liens.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    /* --- Variables de Thème (Personnalisation Facile) --- */
+    :root {
+      --background-color: #f4f4f9;
+      --container-bg-color: #ffffff;
+      --text-color: #1f2937;
+      --bio-text-color: #6b7280;
+      --button-bg-color: #ffffff;
+      --button-text-color: #1f2937;
+      --button-hover-bg-color: #f9fafb;
+      --shadow-color: rgba(0, 0, 0, 0.05);
+      --font-family: 'Inter', sans-serif;
+    }
+
+    /* --- Réinitialisation et Styles de Base --- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-family);
+      background-color: var(--background-color);
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    /* --- Conteneur Principal --- */
+    .main-container {
+      width: 100%;
+      max-width: 680px;
+      text-align: center;
+      padding: 40px;
+      background-color: var(--container-bg-color);
+      border-radius: 24px;
+      box-shadow: 0 10px 30px var(--shadow-color);
+    }
+
+    /* --- Section Profil --- */
+    #profile-container {
+      margin-bottom: 30px;
+    }
+
+    #avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 4px solid #fff;
+      box-shadow: 0 4px 15px var(--shadow-color);
+    }
+
+    #name {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    #bio {
+      font-size: 1rem;
+      color: var(--bio-text-color);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* --- Section des Liens --- */
+    #links-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .link-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      background-color: var(--button-bg-color);
+      color: var(--button-text-color);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, background-color 0.2s ease-out;
+    }
+
+    .link-button:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px var(--shadow-color);
+      background-color: var(--button-hover-bg-color);
+    }
+
+    .link-button i {
+      margin-right: 12px;
+      font-size: 1.2rem;
+      width: 20px; /* Alignement des icônes */
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="main-container">
+    <section id="profile-container">
+      <img id="avatar" src="" alt="Photo de profil">
+      <h1 id="name"></h1>
+      <p id="bio"></p>
+    </section>
+
+    <section id="links-container">
+      </section>
+  </main>
+
+  <script>
+    // --- SECTION DE CONFIGURATION ---
+    // Modifiez les informations ci-dessous pour personnaliser votre page.
+    const config = {
+      profile: {
+        name: "Votre Nom ou Pseudo",
+        bio: "👨🏻‍🌾 Une description de vous, votre activité, ou une citation inspirante.",
+        avatarUrl: "https://via.placeholder.com/150" // URL de votre photo de profil
+      },
+      links: [
+        {
+          title: "Mon Blog",
+          url: "#", // Remplacez "#" par l'URL de votre blog
+          icon: "fa-solid fa-blog"
+        },
+        {
+          title: "LinkedIn",
+          url: "#", // Remplacez "#" par l'URL de votre profil LinkedIn
+          icon: "fa-brands fa-linkedin"
+        },
+        {
+          title: "GitHub",
+          url: "#", // Remplacez "#" par l'URL de votre profil GitHub
+          icon: "fa-brands fa-github"
+        },
+        {
+          title: "Bluesky",
+          url: "#",
+          icon: "fa-brands fa-bluesky"
+        },
+        {
+          title: "X (Twitter)",
+          url: "#",
+          icon: "fa-brands fa-x-twitter"
+        },
+        {
+          title: "Instagram",
+          url: "#",
+          icon: "fa-brands fa-instagram"
+        },
+        {
+          title: "Strava",
+          url: "#",
+          icon: "fa-brands fa-strava"
+        },
+        {
+          title: "Komoot",
+          url: "#",
+          icon: "fa-solid fa-person-hiking"
+        }
+        // Vous pouvez ajouter d'autres liens ici en suivant le même format.
+      ]
+    };
+  </script>
+
+  <script>
+    // Ce script applique la configuration à la page.
+    // Pas besoin de modifier quoi que ce soit ici.
+    document.addEventListener('DOMContentLoaded', function() {
+      const profile = config.profile;
+      document.getElementById('avatar').src = profile.avatarUrl;
+      document.getElementById('name').textContent = profile.name;
+      document.getElementById('bio').textContent = profile.bio;
+
+      const linksContainer = document.getElementById('links-container');
+      const links = config.links;
+
+      links.forEach(link => {
+        const linkElement = document.createElement('a');
+        linkElement.href = link.url;
+        linkElement.className = 'link-button';
+        linkElement.target = '_blank';
+        linkElement.rel = 'noopener noreferrer';
+
+        const iconElement = document.createElement('i');
+        iconElement.className = link.icon;
+
+        const titleElement = document.createElement('span');
+        titleElement.textContent = link.title;
+
+        linkElement.appendChild(iconElement);
+        linkElement.appendChild(titleElement);
+
+        linksContainer.appendChild(linkElement);
+      });
+    });
+  </script>
+
+</body>
+</html>
