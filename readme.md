@@ -2,8 +2,7 @@
 
 Un template simple, élégant et 100% personnalisable pour créer votre propre page de liens ("link-in-bio"). Idéal pour regrouper tous vos profils sociaux et projets en un seul endroit. Le tout dans un unique fichier `index.html`, sans aucune dépendance complexe.
 
-![Aperçu du Hub de Liens](https://i.imgur.com/vHq4g5a.png)
-> Pensez à remplacer le lien de l'image ci-dessus par une capture d'écran de votre page personnalisée !
+<img width="333" alt="image" src="https://github.com/user-attachments/assets/e8559a7f-85e2-46aa-be72-823bfc09e813" />
 
 ---
 
